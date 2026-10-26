@@ -6,6 +6,6 @@ export default function robots(): MetadataRoute.Robots {
       userAgent: "*",
       allow: "/",
     },
-    sitemap: "https://krishnavmalak.github.io/sitemap.xml",
+    sitemap: "https://krishnavm.in/sitemap.xml",
   };
 }

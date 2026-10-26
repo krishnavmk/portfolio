@@ -1,34 +1,32 @@
 "use client";
 import { Badge } from "@/components/ui/badge";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { motion } from "framer-motion";
 
 const skillCategories = [
   {
     id: "frontend",
     title: "Frontend & Mobile",
-    items: ["React Native", "React.js", "TypeScript", "Redux Toolkit", "Zustand", "Context API", "Expo Router", "Deep Linking", "Tailwind CSS", "Async Storage"]
+    items: ["React Native", "React.js", "Next.js", "TypeScript", "JavaScript", "Redux Toolkit", "Zustand", "Context API", "Expo Router", "Deep Linking", "Tailwind CSS", "Async Storage"]
   },
   {
     id: "backend",
     title: "Backend & Database",
-    items: ["Laravel", "PHP", "Node.js", "JWT & Sanctum Auth", "MySQL", "NoSQL", "SQLite", "Meilisearch", "RESTful APIs", "WebSockets"]
+    items: ["Laravel", "PHP", "Node.js", "JWT & Sanctum Auth", "MySQL", "NoSQL", "SQLite", "Meilisearch", "RESTful APIs", "GraphQL", "OAuth 2.0", "OTP-based MFA", "WebSockets"]
   },
   {
     id: "firebase",
     title: "Firebase & Cloud",
-    items: ["Firebase Auth", "Cloud Firestore", "Firebase Storage", "Cloud Messaging (FCM)", "Push Notifications"]
+    items: ["Firebase Auth", "Cloud Firestore", "Firebase Storage", "Cloud Messaging (FCM)", "Push Notifications", "AWS S3"]
   },
   {
     id: "ai",
     title: "AI & Automation",
-    items: ["GenAI Integration", "OpenAI API", "Claude AI", "Gemini Vision", "OCR Data Extraction", "RAG Workflows", "LLMs"]
+    items: ["GenAI Integration", "OpenAI API", "Claude AI", "Gemini Vision", "Qwen-VL", "OCR Data Extraction", "RAG Workflows", "LLMs"]
   },
   {
     id: "integrations",
     title: "Payments & Integrations",
-    items: ["Razorpay", "SMS Integration", "Email Integration", "Git & GitHub", "GitHub Actions"]
+    items: ["Razorpay", "SMS Integration", "Email Integration", "Git & GitHub", "GitHub Actions", "Jest"]
   },
   {
     id: "devops",
@@ -85,17 +83,14 @@ export function SkillsMatrix() {
             <h3 className="text-2xl md:text-3xl font-bold text-foreground mb-3 flex items-center gap-2">
               <span className="text-3xl">🚀</span> AI-Assisted Development Tools
             </h3>
-            <p className="text-muted-foreground text-lg">Leveraging cutting-edge AI coding assistants for 10x productivity</p>
+            <p className="text-muted-foreground text-lg">Using AI coding agents for implementation, debugging, and code review</p>
           </div>
 
           <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-6">
             {[
               { icon: "🤖", title: "Claude Code", description: "AI pair programming" },
               { icon: "✨", title: "Cursor AI", description: "Intelligent IDE" },
-              { icon: "🔮", title: "GitHub Copilot", description: "Code completion" },
               { icon: "⚡", title: "OpenAI Codex", description: "Code generation" },
-              { icon: "🎯", title: "AntiGravity", description: "AI debugging" },
-              { icon: "💫", title: "Opencode", description: "Open-source AI tools" },
             ].map((tool, idx) => (
               <motion.div
                 key={tool.title}

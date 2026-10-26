@@ -14,16 +14,16 @@ const firaCode = Fira_Code({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://krishnavmalak.github.io"),
+  metadataBase: new URL("https://krishnavm.in"),
   title: {
-    default: "Krishna | Software Engineer & Full-Stack Developer",
+    default: "Krishna Vittal Malik | Software Engineer, Mobile & GenAI",
     template: "%s | Krishna's Portfolio",
   },
-  description: "Portfolio of Krishna, a React Native Developer & Software Engineer specializing in cross-platform applications, GenAI integrations, and scalable architectures.",
-  keywords: ["krishna malak", "krishna malik", "krishna", "Software Engineer", "React Native Developer", "Full-Stack Developer"],
+  description: "Krishna Vittal Malik is a software engineer with 5 years of experience building fintech products with React Native, Laravel, Firebase, and GenAI.",
+  keywords: ["Krishna Vittal Malik", "krishna malik", "krishna", "Software Engineer", "React Native Developer", "Full-Stack Developer"],
   openGraph: {
-    title: "Krishna | Software Engineer & Full-Stack Developer",
-    description: "Portfolio of Krishna, a React Native Developer & Software Engineer specializing in cross-platform applications, GenAI integrations, and scalable architectures.",
+    title: "Krishna Vittal Malik | Software Engineer, Mobile & GenAI",
+    description: "Krishna Vittal Malik is a software engineer with 5 years of experience building fintech products with React Native, Laravel, Firebase, and GenAI.",
     url: "/",
     siteName: "Krishna's Portfolio",
     locale: "en_US",
@@ -31,8 +31,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Krishna | Software Engineer & Full-Stack Developer",
-    description: "Portfolio of Krishna, a React Native Developer & Software Engineer specializing in cross-platform applications, GenAI integrations, and scalable architectures.",
+    title: "Krishna Vittal Malik | Software Engineer, Mobile & GenAI",
+    description: "Krishna Vittal Malik is a software engineer with 5 years of experience building fintech products with React Native, Laravel, Firebase, and GenAI.",
   },
   robots: {
     index: true,

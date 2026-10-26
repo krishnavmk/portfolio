@@ -1,7 +1,7 @@
 "use client";
-import { Button } from "@/components/ui/button";
+import { buttonVariants } from "@/components/ui/button";
 import { motion } from "framer-motion";
-import { Terminal, Download, ArrowRight, Smartphone } from "lucide-react";
+import { Terminal, ArrowRight, Smartphone } from "lucide-react";
 
 export function Hero() {
   return (
@@ -19,26 +19,22 @@ export function Hero() {
         >
           <div className="space-y-4">
             <h1 className="text-5xl md:text-7xl font-bold leading-tight tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-primary via-purple-500 to-pink-500 pb-2">
-              Hi, I'm Krishna
+              Hi, I&apos;m Krishna
             </h1>
             <h2 className="text-xl md:text-2xl font-semibold text-muted-foreground">
-              React Native Engineer | Full-Stack Mobile & Backend Developer
+              Software Engineer | Mobile, Backend & GenAI
             </h2>
             <p className="text-lg text-muted-foreground max-w-xl">
-              I build intelligent systems and scalable mobile platforms using cutting-edge technologies. Specializing in production-grade React Native apps, GenAI integrations, secure Laravel backends, and Firebase infrastructure with 4+ years of fintech expertise.
+              I build and ship fintech products end to end: React Native apps for iOS, Android, and web, secure Laravel backends, and AI-powered data extraction. With 5 years of experience, I own features from design through store release.
             </p>
           </div>
           
           <div className="flex flex-wrap gap-4">
-            <motion.a href="#contact" whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-              <Button size="lg" className="bg-foreground text-background hover:bg-foreground/90 font-medium transition-all duration-300 rounded-full px-8">
-                Let's Connect <ArrowRight className="ml-2 h-4 w-4" />
-              </Button>
+            <motion.a href="#contact" whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} className={buttonVariants({ size: "lg", className: "bg-foreground text-background hover:bg-foreground/90 font-medium rounded-full px-8" })}>
+                Let&apos;s Connect <ArrowRight className="ml-2 h-4 w-4" />
             </motion.a>
-            <motion.a href="#about" whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-              <Button size="lg" variant="outline" className="font-medium transition-all duration-300 rounded-full px-8 border-border hover:bg-muted text-foreground">
+            <motion.a href="#about" whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} className={buttonVariants({ size: "lg", variant: "outline", className: "font-medium rounded-full px-8" })}>
                 Learn More
-              </Button>
             </motion.a>
           </div>
         </motion.div>
@@ -97,8 +93,8 @@ export function Hero() {
                 </svg>
               </div>
               <div>
-                <h3 className="font-bold text-slate-800">AI Integrations</h3>
-                <p className="text-xs text-slate-500">RAG, OCR & LLMs</p>
+                <h3 className="font-bold text-foreground">AI Integrations</h3>
+                <p className="text-xs text-muted-foreground">RAG, OCR & LLMs</p>
               </div>
             </div>
           </motion.div>

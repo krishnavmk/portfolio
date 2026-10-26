@@ -48,6 +48,7 @@
 }
 
 :root {
+  --radius: 0.625rem;
   --background: #f8fafc;
   /* Light slate */
   --foreground: #0f172a;
@@ -109,4 +110,12 @@
   html {
     @apply font-sans;
   }
+}
+section[id], footer[id] {
+  scroll-margin-top: 6rem;
+}
+
+a:focus-visible, button:focus-visible {
+  outline: 2px solid var(--ring);
+  outline-offset: 4px;
 }

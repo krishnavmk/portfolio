@@ -1,10 +1,9 @@
-import { motion } from "framer-motion";
 import { Zap, Code2, Cpu } from "lucide-react";
 
 const metrics = [
   {
     icon: <Code2 className="w-6 h-6 text-primary" />,
-    value: "4+ Years",
+    value: "5 Years",
     label: "Mobile & Backend Experience",
   },
   {

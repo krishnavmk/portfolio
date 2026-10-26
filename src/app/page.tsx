@@ -9,29 +9,31 @@ export default function Home() {
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "Person",
-    name: "Krishna",
+    name: "Krishna Vittal Malik",
     jobTitle: "Software Engineer",
-    url: "https://krishnavmalak.github.io",
+    url: "https://krishnavm.in",
     sameAs: [
-      "https://www.linkedin.com/in/krishna-malik-84bb31211/",
-      "https://github.com/krishnavmalak"
+      "https://www.linkedin.com/in/krishnavmk/",
+      "https://github.com/krishnavmk"
     ],
-    description: "Full-Stack Engineer with over 4 years of experience architecting scalable systems and leading mobile-first product innovation.",
+    description: "Software engineer with 5 years building fintech products across mobile, backend, and GenAI.",
   };
 
   return (
-    <main className="flex min-h-screen flex-col bg-background selection:bg-primary/30">
+    <div className="flex min-h-screen flex-col bg-background selection:bg-primary/30">
+      <a href="#main-content" className="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-[100] focus:rounded-lg focus:bg-background focus:p-4">Skip to content</a>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
       <Header />
-      <Hero />
-      <About />
-      <SkillsMatrix />
-
-      <KeyAchievements />
+      <main id="main-content" tabIndex={-1}>
+        <Hero />
+        <About />
+        <SkillsMatrix />
+        <KeyAchievements />
+      </main>
       <ContactFooter />
-    </main>
+    </div>
   );
 }

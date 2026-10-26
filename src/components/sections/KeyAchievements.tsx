@@ -1,13 +1,13 @@
 "use client";
 import { motion } from "framer-motion";
-import { Sparkles, Server, Smartphone, Brain, Database, Zap } from "lucide-react";
+import { Sparkles, Smartphone, Brain, Database, Zap } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 
 const achievements = [
   {
     id: "ai-ocr",
     title: "AI-Powered OCR Pipeline",
-    description: "Engineered a high-performance AI extraction pipeline using Gemini Vision and Qwen-VL to accurately read handwritten ledgers and convert them into structured relational databases. Delivered intelligent automation reducing manual data entry workload.",
+    description: "Built OCR data extraction with Gemini Vision and Qwen-VL, reaching 96% field-level accuracy and reducing manual data entry by 90%.",
     icon: <Brain className="w-6 h-6" />,
     color: "text-purple-600",
     bgColor: "bg-purple-100",
@@ -16,8 +16,8 @@ const achievements = [
   },
   {
     id: "scalable-platforms",
-    title: "Production React Native Apps (10k+ Users)",
-    description: "Architected and deployed scalable React Native applications serving thousands of active users in the fintech domain. Integrated Razorpay payment gateways, Firebase Authentication, Cloud Firestore, FCM push notifications, and learning management systems (LMS).",
+    title: "Cross-Platform Fintech Applications",
+    description: "Led React Native development for iOS, Android, and web, covering portfolio, transaction, and onboarding flows. Integrated Firebase and Razorpay and owned releases through App Store Connect and Google Play Console.",
     icon: <Smartphone className="w-6 h-6" />,
     color: "text-indigo-600",
     bgColor: "bg-indigo-100",
@@ -27,7 +27,7 @@ const achievements = [
   {
     id: "performance",
     title: "Performance & Backend Optimization",
-    description: "Designed robust Laravel REST APIs with JWT and Sanctum authentication and optimized complex database queries. Improved Meilisearch indexing latency from 1200ms to 200ms—a 6× performance boost. Managed full release cycles via Google Play Console and App Store Connect.",
+    description: "Designed robust Laravel REST APIs with JWT and Sanctum authentication and optimized complex database queries. Improved Meilisearch search latency from 1200ms to 200ms—a 6× performance boost. Managed full release cycles via Google Play Console and App Store Connect.",
     icon: <Zap className="w-6 h-6" />,
     color: "text-emerald-600",
     bgColor: "bg-emerald-100",
@@ -47,12 +47,12 @@ const achievements = [
   {
     id: "integrations",
     title: "Payment & Service Integrations",
-    description: "Seamlessly integrated Razorpay payment gateway, SMS notification services, and email integration for transactional communications. Ensured PCI compliance and secure handling of sensitive payment data.",
+    description: "Integrated Razorpay payments with custom transaction validation, SMS notifications, and transactional email. Built secure authentication flows with OAuth 2.0, Sanctum tokens, and OTP-based MFA.",
     icon: <Sparkles className="w-6 h-6" />,
     color: "text-pink-600",
     bgColor: "bg-pink-100",
     borderColor: "border-pink-200",
-    tags: ["Razorpay", "SMS Integration", "Email Integration", "PCI Compliance", "Webhooks"]
+    tags: ["Razorpay", "SMS Integration", "Email Integration", "Transaction Validation", "OTP-based MFA"]
   }
 ];
 

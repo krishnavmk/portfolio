@@ -29,29 +29,30 @@ export function About() {
 
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-10 pb-10 border-b border-border">
             <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: 0.1 }}>
-              <div className="text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-primary to-purple-500">4+</div>
+              <div className="text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-primary to-purple-500">5</div>
               <div className="text-sm text-muted-foreground font-medium mt-1 uppercase tracking-wider">Years Exp</div>
             </motion.div>
             <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: 0.2 }}>
-              <div className="text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-primary to-purple-500">10k+</div>
-              <div className="text-sm text-muted-foreground font-medium mt-1 uppercase tracking-wider">Users Reached</div>
+              <div className="text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-primary to-purple-500">96%</div>
+              <div className="text-sm text-muted-foreground font-medium mt-1 uppercase tracking-wider">OCR Field Accuracy</div>
             </motion.div>
             <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: 0.3 }}>
               <div className="text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-primary to-purple-500">6x</div>
               <div className="text-sm text-muted-foreground font-medium mt-1 uppercase tracking-wider">Perf Boost</div>
             </motion.div>
             <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: 0.4 }}>
-              <div className="text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-primary to-purple-500">100%</div>
-              <div className="text-sm text-muted-foreground font-medium mt-1 uppercase tracking-wider">Delivery</div>
+              <div className="text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-primary to-purple-500">90%</div>
+              <div className="text-sm text-muted-foreground font-medium mt-1 uppercase tracking-wider">Less Manual Entry</div>
             </motion.div>
           </div>
 
+          <p className="text-sm font-medium text-primary mb-4">Krishna Vittal Malik · Bengaluru, India</p>
           <div className="text-lg text-muted-foreground max-w-3xl leading-relaxed space-y-4">
             <p>
-              I'm a React Native Engineer with 4+ years of production experience architecting scalable mobile platforms and backend systems. I specialize in shipping high-performance iOS and Android applications, with deep expertise in fintech, secure API design, and Firebase infrastructure.
+              I&apos;m a React Native Engineer with 5 years of production experience architecting scalable mobile platforms and backend systems. I specialize in shipping iOS, Android, and web applications, with deep expertise in fintech, secure API design, and Firebase infrastructure.
             </p>
             <p>
-              Currently leading mobile and backend development for the EldersIndia application, where I architect production React Native applications serving thousands of active users and design secure Laravel REST APIs with JWT and Sanctum authentication. I've delivered measurable impact: 6x search performance improvements (1200ms to 200ms via Meilisearch optimization), integrated Razorpay payment gateways, implemented Firebase Cloud Messaging for real-time features, and managed full release cycles across Google Play Console and App Store Connect.
+              I lead mobile and backend development for fintech products, covering portfolio, transaction, and onboarding flows. I design Laravel REST APIs with Sanctum token authentication, OTP-based MFA, and OAuth 2.0 social login, integrate Razorpay payments, and manage releases through App Store Connect and Google Play Console.
             </p>
             <p>
               Beyond core engineering, I build AI-powered automation workflows—such as OCR record extraction pipelines using Gemini Vision and Qwen-VL—demonstrating full-stack capability from frontend UX to backend infrastructure and intelligent data processing.
@@ -94,21 +95,21 @@ export function About() {
                 <span className="w-1.5 h-1.5 rounded-full bg-primary"></span>
                 Search Performance Optimization
               </h3>
-              <p className="text-muted-foreground ml-3.5">Optimized Meilisearch indexing architecture, dramatically reducing global search latency by 6× (from 1200ms down to a blazing 200ms).</p>
+              <p className="text-muted-foreground ml-3.5">Optimized Meilisearch indexing architecture, reducing search latency by 6× (from 1200ms to 200ms).</p>
             </motion.div>
             <motion.div initial={{ opacity: 0, y: 15 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.4, delay: 0.2 }} className="space-y-2">
               <h3 className="text-lg font-bold text-foreground flex items-center gap-2">
                 <span className="w-1.5 h-1.5 rounded-full bg-primary"></span>
                 Scalable Enterprise Platforms
               </h3>
-              <p className="text-muted-foreground ml-3.5">Architected and maintained robust full-stack applications serving thousands of active users seamlessly across iOS, Android, and web.</p>
+              <p className="text-muted-foreground ml-3.5">Built and shipped fintech applications across iOS, Android, and web, owning features from design through store release.</p>
             </motion.div>
             <motion.div initial={{ opacity: 0, y: 15 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.4, delay: 0.3 }} className="space-y-2">
               <h3 className="text-lg font-bold text-foreground flex items-center gap-2">
                 <span className="w-1.5 h-1.5 rounded-full bg-primary"></span>
                 Intelligent Integrations
               </h3>
-              <p className="text-muted-foreground ml-3.5">Successfully integrated secure payment gateways (Razorpay), real-time communications (WebSockets/WebRTC), and complex push notification systems.</p>
+              <p className="text-muted-foreground ml-3.5">Successfully integrated secure payment gateways (Razorpay), real-time communications (WebSockets), and complex push notification systems.</p>
             </motion.div>
             <motion.div initial={{ opacity: 0, y: 15 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.4, delay: 0.4 }} className="space-y-2">
               <h3 className="text-lg font-bold text-foreground flex items-center gap-2">
