@@ -27,7 +27,7 @@ const achievements = [
   {
     id: "performance",
     title: "Performance & Backend Optimization",
-    description: "Designed robust Laravel REST APIs with JWT and Sanctum authentication and optimized complex database queries. Improved Meilisearch search latency from 1200ms to 200ms—a 6× performance boost. Managed full release cycles via Google Play Console and App Store Connect.",
+    description: "Designed robust Laravel REST APIs with JWT and Sanctum authentication. Removed N+1 queries with eager loading and improved API response times through caching and database indexing. Improved Meilisearch search latency from 1200ms to 200ms—a 6× performance boost. Managed full release cycles via Google Play Console and App Store Connect.",
     icon: <Zap className="w-6 h-6" />,
     color: "text-emerald-600",
     bgColor: "bg-emerald-100",
