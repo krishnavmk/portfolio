@@ -1,124 +1,19 @@
-"use client";
-import { motion } from "framer-motion";
-import { Code, Server, Zap } from "lucide-react";
-
 export function About() {
-  const cards = [
-    {
-      icon: <Code className="w-8 h-8 text-primary" />,
-      title: "Mobile First",
-      description: "Building seamless, native-feeling experiences using React Native and Expo."
-    },
-    {
-      icon: <Server className="w-8 h-8 text-accent" />,
-      title: "Scalable Backends",
-      description: "Architecting high-performance APIs and databases using Laravel, MySQL, and NoSQL."
-    },
-    {
-      icon: <Zap className="w-8 h-8 text-yellow-500" />,
-      title: "AI Integration",
-      description: "Enhancing applications with RAG workflows, OCR data extraction, and LLMs."
-    }
-  ];
-
   return (
-    <section id="about" className="pt-12 pb-12 bg-card/30 relative">
+    <section id="about" tabIndex={-1} className="py-12 bg-card/30">
       <div className="container px-4 mx-auto max-w-6xl">
-        <div className="mb-16">
-          <h2 className="text-3xl md:text-5xl font-bold mb-8 text-foreground tracking-tight">Building Scalable Solutions</h2>
-
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-10 pb-10 border-b border-border">
-            <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: 0.1 }}>
-              <div className="text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-primary to-purple-500">5</div>
-              <div className="text-sm text-muted-foreground font-medium mt-1 uppercase tracking-wider">Years Exp</div>
-            </motion.div>
-            <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: 0.2 }}>
-              <div className="text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-primary to-purple-500">96%</div>
-              <div className="text-sm text-muted-foreground font-medium mt-1 uppercase tracking-wider">OCR Field Accuracy</div>
-            </motion.div>
-            <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: 0.3 }}>
-              <div className="text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-primary to-purple-500">6x</div>
-              <div className="text-sm text-muted-foreground font-medium mt-1 uppercase tracking-wider">Perf Boost</div>
-            </motion.div>
-            <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: 0.4 }}>
-              <div className="text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-primary to-purple-500">90%</div>
-              <div className="text-sm text-muted-foreground font-medium mt-1 uppercase tracking-wider">Less Manual Entry</div>
-            </motion.div>
-          </div>
-
-          <p className="text-sm font-medium text-primary mb-4">Krishna Vittal Malik · Bengaluru, India</p>
-          <div className="text-lg text-muted-foreground max-w-3xl leading-relaxed space-y-4">
-            <p>
-              I&apos;m a React Native Engineer with 5 years of production experience architecting scalable mobile platforms and backend systems. I specialize in shipping iOS, Android, and web applications, with deep expertise in fintech, secure API design, and Firebase infrastructure.
-            </p>
-            <p>
-              I lead mobile and backend development for fintech products, covering portfolio, transaction, and onboarding flows. I design Laravel REST APIs with Sanctum token authentication, OTP-based MFA, and OAuth 2.0 social login, integrate Razorpay payments, and manage releases through App Store Connect and Google Play Console.
-            </p>
-            <p>
-              Beyond core engineering, I build AI-powered automation workflows—such as OCR record extraction pipelines using Gemini Vision and Qwen-VL—demonstrating full-stack capability from frontend UX to backend infrastructure and intelligent data processing.
-            </p>
-
-          </div>
-        </div>
-
-        <div className="grid md:grid-cols-3 gap-8 mb-20">
-          {cards.map((card, idx) => (
-            <motion.div
-              key={idx}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: idx * 0.1 }}
-              className="group p-8 rounded-2xl bg-card border border-border/50 shadow-sm hover:shadow-xl hover:-translate-y-1 hover:bg-gradient-to-br hover:from-card hover:to-primary/5 transition-all duration-300"
-            >
-              <div className="mb-6 inline-flex p-3 rounded-xl bg-background/50 border border-border/50 group-hover:scale-110 transition-transform duration-300">
-                {card.icon}
-              </div>
-              <h3 className="text-xl font-bold mb-3">{card.title}</h3>
-              <p className="text-muted-foreground">{card.description}</p>
-            </motion.div>
-          ))}
-        </div>
-
-        <div className="space-y-8">
-          <motion.h2 
-            initial={{ opacity: 0, x: -20 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            className="text-2xl md:text-3xl font-bold border-b border-border/50 pb-4"
-          >
-            Key Achievements
-          </motion.h2>
-          <div className="grid md:grid-cols-2 gap-8">
-            <motion.div initial={{ opacity: 0, y: 15 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.4, delay: 0.1 }} className="space-y-2">
-              <h3 className="text-lg font-bold text-foreground flex items-center gap-2">
-                <span className="w-1.5 h-1.5 rounded-full bg-primary"></span>
-                Search Performance Optimization
-              </h3>
-              <p className="text-muted-foreground ml-3.5">Optimized Meilisearch indexing architecture, reducing search latency by 6× (from 1200ms to 200ms).</p>
-            </motion.div>
-            <motion.div initial={{ opacity: 0, y: 15 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.4, delay: 0.2 }} className="space-y-2">
-              <h3 className="text-lg font-bold text-foreground flex items-center gap-2">
-                <span className="w-1.5 h-1.5 rounded-full bg-primary"></span>
-                Scalable Enterprise Platforms
-              </h3>
-              <p className="text-muted-foreground ml-3.5">Built and shipped fintech applications across iOS, Android, and web, owning features from design through store release.</p>
-            </motion.div>
-            <motion.div initial={{ opacity: 0, y: 15 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.4, delay: 0.3 }} className="space-y-2">
-              <h3 className="text-lg font-bold text-foreground flex items-center gap-2">
-                <span className="w-1.5 h-1.5 rounded-full bg-primary"></span>
-                Intelligent Integrations
-              </h3>
-              <p className="text-muted-foreground ml-3.5">Successfully integrated secure payment gateways (Razorpay), real-time communications (WebSockets), and complex push notification systems.</p>
-            </motion.div>
-            <motion.div initial={{ opacity: 0, y: 15 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.4, delay: 0.4 }} className="space-y-2">
-              <h3 className="text-lg font-bold text-foreground flex items-center gap-2">
-                <span className="w-1.5 h-1.5 rounded-full bg-primary"></span>
-                AI Workflows & Automation
-              </h3>
-              <p className="text-muted-foreground ml-3.5">Engineered prompt pipelines and OCR data extraction workflows, leveraging LLMs to automate internal business processes.</p>
-            </motion.div>
-          </div>
+        <h2 className="text-3xl md:text-5xl font-bold mb-8 tracking-tight">About Me</h2>
+        <p className="text-sm font-medium text-primary mb-4">Krishna Vittal Malik · Bengaluru, India</p>
+        <div className="text-lg text-muted-foreground max-w-3xl leading-relaxed space-y-4">
+          <p>
+            I&apos;m a software engineer with 5 years of experience building mobile and web applications
+            and the APIs behind them.
+          </p>
+          <p>
+            I break complex problems into smaller pieces, define clear boundaries between components
+            and services, and weigh trade-offs around performance, reliability, and maintainability.
+            I use prototypes and tests to validate decisions and isolate issues across the stack.
+          </p>
         </div>
       </div>
     </section>

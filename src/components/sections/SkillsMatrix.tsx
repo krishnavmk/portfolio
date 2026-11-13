@@ -1,113 +1,37 @@
-"use client";
 import { Badge } from "@/components/ui/badge";
-import { motion } from "framer-motion";
 
 const skillCategories = [
-  {
-    id: "frontend",
-    title: "Frontend & Mobile",
-    items: ["React Native", "React.js", "Next.js", "TypeScript", "JavaScript", "Redux Toolkit", "Zustand", "Context API", "Expo Router", "Deep Linking", "Tailwind CSS", "Async Storage"]
-  },
-  {
-    id: "backend",
-    title: "Backend & Database",
-    items: ["Laravel", "PHP", "Node.js", "JWT & Sanctum Auth", "MySQL", "NoSQL", "SQLite", "Meilisearch", "RESTful APIs", "GraphQL", "OAuth 2.0", "OTP-based MFA", "WebSockets"]
-  },
-  {
-    id: "firebase",
-    title: "Firebase & Cloud",
-    items: ["Firebase Auth", "Cloud Firestore", "Firebase Storage", "Cloud Messaging (FCM)", "Push Notifications", "AWS S3"]
-  },
-  {
-    id: "ai",
-    title: "AI & Automation",
-    items: ["GenAI Integration", "OpenAI API", "Claude AI", "Gemini Vision", "Qwen-VL", "OCR Data Extraction", "RAG Workflows", "LLMs"]
-  },
-  {
-    id: "integrations",
-    title: "Payments & Integrations",
-    items: ["Razorpay", "SMS Integration", "Email Integration", "Git & GitHub", "GitHub Actions", "Jest"]
-  },
-  {
-    id: "devops",
-    title: "DevOps & Deployment",
-    items: ["Google Play Console", "App Store Connect", "Cloudflare Pages", "Cloudflare DNS", "Release Cycle Management"]
-  }
+  { title: "Mobile", items: ["React Native", "Expo", "Expo Router"] },
+  { title: "Frontend", items: ["React", "Next.js", "TypeScript", "Tailwind CSS"] },
+  { title: "Backend", items: ["Node.js", "REST APIs"] },
+  { title: "Data/Cloud", items: ["SQLite", "Firebase", "Cloudflare"] },
+  { title: "Testing", items: ["Jest", "Playwright"] },
+  { title: "AI Tools", items: ["OpenAI API", "OpenAI Codex"] },
 ];
 
 export function SkillsMatrix() {
   return (
-    <section id="skills" className="pt-20 pb-12 relative">
-      <div className="container px-4 mx-auto">
-        <div className="mb-12 text-center">
-          <div className="inline-flex items-center justify-center px-4 py-1.5 mb-4 rounded-full bg-indigo-50 text-indigo-600 font-medium text-sm tracking-wide">
-            SKILLS & TECHNOLOGIES
-          </div>
-          <h2 className="text-3xl md:text-5xl font-bold mb-4 text-foreground tracking-tight">Technical Arsenal</h2>
-          <p className="text-muted-foreground max-w-2xl mx-auto text-lg">
-            A comprehensive overview of the tools and technologies I use to build scalable, high-performance applications.
-          </p>
-        </div>
-
-        <div className="grid md:grid-cols-2 gap-6 max-w-5xl mx-auto">
-          {skillCategories.map((category, index) => (
-            <motion.div
-              key={category.id}
-              initial={{ opacity: 0, y: 10 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.3, delay: index * 0.1 }}
-              className={`bg-card rounded-2xl p-8 border border-border shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-center dark:bg-slate-900 dark:border-slate-700`}
-            >
-              <h3 className="text-xl font-bold mb-6 text-foreground flex items-center gap-2">
-                {category.title}
-              </h3>
-
-              <div className="flex flex-wrap gap-2.5">
-                {category.items.map((skill) => (
-                  <motion.div key={skill} whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-                    <Badge
-                      variant="secondary"
-                      className={`text-sm py-1.5 px-4 font-medium transition-colors bg-muted text-muted-foreground hover:bg-muted/80 border border-border`}
-                    >
+    <section id="skills" tabIndex={-1} className="py-12 md:py-20 bg-card/30">
+      <div className="container px-4 mx-auto max-w-5xl">
+        <h2 className="text-center text-3xl md:text-5xl font-bold tracking-tight mb-10">
+          Technical Skills
+        </h2>
+        <div className="grid md:grid-cols-2 gap-6">
+          {skillCategories.map(({ title, items }) => (
+            <article key={title} className="bg-card rounded-2xl p-6 sm:p-8 border border-border shadow-sm dark:bg-slate-900">
+              <h3 className="text-xl font-bold mb-4">{title}</h3>
+              <ul className="flex flex-wrap gap-2.5" role="list">
+                {items.map((skill) => (
+                  <li key={skill}>
+                    <Badge variant="secondary" className="text-sm py-1.5 px-4 bg-muted text-muted-foreground border border-border">
                       {skill}
                     </Badge>
-                  </motion.div>
+                  </li>
                 ))}
-              </div>
-            </motion.div>
+              </ul>
+            </article>
           ))}
         </div>
-
-        <div className="mt-16 max-w-6xl mx-auto bg-gradient-to-br from-indigo-500/5 to-pink-500/5 rounded-3xl border-2 border-indigo-500/10 p-8 md:p-12">
-          <div className="mb-12 flex flex-col items-center justify-center text-center">
-            <h3 className="text-2xl md:text-3xl font-bold text-foreground mb-3 flex items-center gap-2">
-              <span className="text-3xl">🚀</span> AI-Assisted Development Tools
-            </h3>
-            <p className="text-muted-foreground text-lg">Using AI coding agents for implementation, debugging, and code review</p>
-          </div>
-
-          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-6">
-            {[
-              { icon: "🤖", title: "Claude Code", description: "AI pair programming" },
-              { icon: "✨", title: "Cursor AI", description: "Intelligent IDE" },
-              { icon: "⚡", title: "OpenAI Codex", description: "Code generation" },
-            ].map((tool, idx) => (
-              <motion.div
-                key={tool.title}
-                initial={{ opacity: 0, scale: 0.95 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.3, delay: 0.2 + idx * 0.1 }}
-                className="bg-card rounded-2xl p-6 border border-border shadow-sm hover:shadow-lg hover:-translate-y-1 hover:border-primary transition-all duration-300 ease-out flex flex-col items-center text-center group dark:bg-slate-900 dark:border-slate-700"
-              >
-                <div className="text-4xl mb-4 group-hover:scale-110 transition-transform duration-300">{tool.icon}</div>
-                <h4 className="text-base font-bold text-foreground mb-2">{tool.title}</h4>
-                <p className="text-sm text-muted-foreground leading-tight">{tool.description}</p>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-
       </div>
     </section>
   );

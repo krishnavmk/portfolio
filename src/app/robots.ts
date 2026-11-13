@@ -1,4 +1,5 @@
-import { MetadataRoute } from "next";
+import { siteUrl } from "@/lib/portfolio";
+import type { MetadataRoute } from "next";
 
 export default function robots(): MetadataRoute.Robots {
   return {
@@ -6,6 +7,6 @@ export default function robots(): MetadataRoute.Robots {
       userAgent: "*",
       allow: "/",
     },
-    sitemap: "https://krishnavm.in/sitemap.xml",
+    sitemap: `${siteUrl}/sitemap.xml`,
   };
 }

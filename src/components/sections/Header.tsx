@@ -1,6 +1,6 @@
 "use client";
 import { useState, useEffect, useRef } from "react";
-import { motion } from "framer-motion";
+import { navLinks } from "@/lib/portfolio";
 import { Menu, X } from "lucide-react";
 import { ThemeToggle } from "@/components/ui/ThemeToggle";
 
@@ -37,16 +37,14 @@ export function Header() {
     };
   }, []);
 
-  const navLinks = [
-    { name: "Home", href: "#home" },
-    { name: "About", href: "#about" },
-    { name: "Skills", href: "#skills" },
-    { name: "Work", href: "#work" },
-    { name: "Contact", href: "#contact" },
-  ];
-
   return (
     <header
+      onKeyDown={(event) => {
+        if (event.key === "Escape" && isMobileMenuOpen) {
+          setIsMobileMenuOpen(false);
+          menuButton.current?.focus();
+        }
+      }}
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? "bg-white/70 dark:bg-slate-900/70 backdrop-blur-md border-b border-slate-200 dark:border-slate-700 py-3 shadow-sm" : "bg-transparent py-5"
         }`}
     >
@@ -57,7 +55,7 @@ export function Header() {
           </div>
         </a>
         {/* Desktop Nav (Hidden on mobile) */}
-        <div role="navigation" aria-label="Main navigation" className="hidden md:flex items-center gap-8">
+        <nav aria-label="Main navigation" className="hidden md:flex items-center gap-5 lg:gap-8">
           {navLinks.map((link) => {
             const isActive = activeSection === link.href.substring(1);
             return (
@@ -72,8 +70,8 @@ export function Header() {
               </a>
             );
           })}
-          
-        </div>
+
+        </nav>
 
         {/* Theme Toggle + Mobile Menu Toggle (Always visible) */}
         <div className="flex items-center gap-2 md:gap-4">
@@ -83,7 +81,7 @@ export function Header() {
             type="button"
             aria-label={isMobileMenuOpen ? "Close navigation" : "Open navigation"}
             aria-expanded={isMobileMenuOpen}
-            aria-controls="mobile-navigation"
+            aria-controls={isMobileMenuOpen ? "mobile-navigation" : undefined}
             className="md:hidden text-foreground p-2"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           >
@@ -94,18 +92,10 @@ export function Header() {
 
       {/* Mobile Nav */}
       {isMobileMenuOpen && (
-        <motion.nav
+        <nav
           id="mobile-navigation"
           aria-label="Mobile navigation"
-          onKeyDown={(event) => {
-            if (event.key === "Escape") {
-              setIsMobileMenuOpen(false);
-              menuButton.current?.focus();
-            }
-          }}
-          initial={{ opacity: 0, y: -10 }}
-          animate={{ opacity: 1, y: 0 }}
-          className="md:hidden absolute top-full left-0 right-0 bg-card dark:bg-slate-800 border-b border-border dark:border-slate-700 shadow-lg p-4 flex flex-col gap-4"
+          className="md:hidden absolute top-full left-0 right-0 bg-card dark:bg-slate-800 border-b border-border dark:border-slate-700 shadow-lg p-4 flex flex-col gap-1 max-h-[calc(100dvh-5rem)] overflow-y-auto"
         >
           {navLinks.map((link) => {
             const isActive = activeSection === link.href.substring(1);
@@ -116,13 +106,16 @@ export function Header() {
                 aria-current={isActive ? "location" : undefined}
                 className={`font-medium p-2 rounded-md transition-colors ${isActive ? "text-primary bg-primary/5 dark:bg-primary/10" : "text-foreground hover:bg-muted dark:hover:bg-slate-700"
                   }`}
-                onClick={() => setIsMobileMenuOpen(false)}
+                onClick={() => {
+                  setIsMobileMenuOpen(false);
+                  document.getElementById(link.href.slice(1))?.focus({ preventScroll: true });
+                }}
               >
                 {link.name}
               </a>
             );
           })}
-        </motion.nav>
+        </nav>
       )}
     </header>
   );

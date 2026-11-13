@@ -57,8 +57,8 @@
   --card-foreground: #0f172a;
   --popover: #ffffff;
   --popover-foreground: #0f172a;
-  --primary: #6366f1;
-  /* Indigo 500 */
+  --primary: #4f46e5;
+  /* Indigo 600 */
   --primary-foreground: #ffffff;
   --secondary: #f1f5f9;
   /* Slate 100 */
@@ -83,8 +83,8 @@
   --card-foreground: #f8fafc;
   --popover: #1e293b;
   --popover-foreground: #f8fafc;
-  --primary: #8b5cf6;
-  --primary-foreground: #ffffff;
+  --primary: #a78bfa;
+  --primary-foreground: #0f172a;
   --secondary: #334155;
   --secondary-foreground: #f8fafc;
   --muted: #334155;
@@ -111,11 +111,11 @@
     @apply font-sans;
   }
 }
-section[id], footer[id] {
+section[id], footer[id], #main-content {
   scroll-margin-top: 6rem;
 }
 
-a:focus-visible, button:focus-visible {
+a:focus-visible, button:focus-visible, [tabindex="-1"]:focus-visible {
   outline: 2px solid var(--ring);
   outline-offset: 4px;
 }
