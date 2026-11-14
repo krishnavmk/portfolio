@@ -1,4 +1,4 @@
-import { Braces, Cloud, Layout, Server, Smartphone } from "lucide-react";
+import { Braces, Cloud, CreditCard, Layout, Server, Smartphone } from "lucide-react";
 
 const expertise = [
   {
@@ -17,6 +17,11 @@ const expertise = [
     description: "Design APIs and data models with clear contracts, input validation, and predictable behavior when requests fail or retry.",
   },
   {
+    icon: CreditCard,
+    title: "Payments & Fintech",
+    description: "Integrate Razorpay payment gateways, verify webhooks, automate invoicing, and handle transaction failures with rollback safeguards.",
+  },
+  {
     icon: Cloud,
     title: "Cloud & DevOps",
     description: "Configure cloud services and delivery workflows, including environment settings, automated checks, and repeatable builds.",
@@ -24,7 +29,7 @@ const expertise = [
   {
     icon: Braces,
     title: "AI Integration",
-    description: "Integrate model APIs into applications and handle timeouts, unusable responses, and cases that need human review.",
+    description: "Build AI features using the OpenAI API and Claude, integrate Gemini Vision and Qwen-VL for multimodal tasks, and use retrieval-augmented generation (RAG). Handle timeouts and unusable responses, and route cases to human review when needed.",
   },
 ];
 

@@ -1,5 +1,5 @@
 import { githubUrl, linkedinUrl, navLinks } from "@/lib/portfolio";
-import { MapPin, Mail, Phone } from "lucide-react";
+import { MapPin, Mail } from "lucide-react";
 
 export function ContactFooter() {
   return (
@@ -11,8 +11,9 @@ export function ContactFooter() {
             Get in <span className="text-primary">Touch</span>
           </h2>
           <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-            Email me about engineering opportunities, collaborations, or questions about my open source work.
+            Email me about engineering opportunities, collaborations, or questions.
           </p>
+          <p className="font-medium text-foreground">Open to engineering roles and collaborations.</p>
         </div>
 
         <div className="flex flex-col w-full gap-4">
@@ -27,20 +28,6 @@ export function ContactFooter() {
             <div className="min-w-0">
               <div className="text-sm text-muted-foreground font-medium mb-1">Email</div>
               <div className="font-semibold text-foreground text-base sm:text-lg wrap-anywhere">krishnamalak123@gmail.com</div>
-            </div>
-          </a>
-
-          <a
-            href="tel:+916363960861"
-
-            className="flex items-center p-6 bg-card rounded-2xl border border-border hover:border-primary/20 hover:shadow-md transition-all duration-300 w-full text-left dark:bg-slate-900 dark:border-slate-700"
-          >
-            <div className="w-12 h-12 rounded-full bg-primary/10 text-primary flex items-center justify-center mr-3 sm:mr-6 shrink-0">
-              <Phone aria-hidden="true" className="w-5 h-5" />
-            </div>
-            <div className="min-w-0">
-              <div className="text-sm text-muted-foreground font-medium mb-1">Phone</div>
-              <div className="font-semibold text-foreground text-base sm:text-lg wrap-anywhere">+91 6363960861</div>
             </div>
           </a>
 
@@ -101,7 +88,7 @@ export function ContactFooter() {
               ))}
             </nav>
             <div className="text-sm text-slate-300">
-              © {new Date().getFullYear()} Krishna. All rights reserved.
+              © {new Date().getFullYear()} Krishna Vittal Malik. All rights reserved.
             </div>
           </div>
 

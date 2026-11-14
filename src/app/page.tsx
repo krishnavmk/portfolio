@@ -3,7 +3,6 @@ import { Hero } from "@/components/sections/Hero";
 import { About } from "@/components/sections/About";
 import { SkillsMatrix } from "@/components/sections/SkillsMatrix";
 import { EngineeringExpertise } from "@/components/sections/EngineeringExpertise";
-import { OpenSource } from "@/components/sections/OpenSource";
 import { githubUrl, linkedinUrl, siteDescription, siteUrl } from "@/lib/portfolio";
 import { ContactFooter } from "@/components/sections/ContactFooter";
 
@@ -12,8 +11,13 @@ export default function Home() {
     "@context": "https://schema.org",
     "@type": "Person",
     name: "Krishna Vittal Malik",
-    jobTitle: "Software Engineer",
+    jobTitle: "React Native & Full-Stack Developer",
     url: siteUrl,
+    address: {
+      "@type": "PostalAddress",
+      addressLocality: "Bengaluru",
+      addressCountry: "IN",
+    },
     sameAs: [githubUrl, linkedinUrl],
     description: siteDescription,
   };
@@ -31,7 +35,6 @@ export default function Home() {
         <About />
         <EngineeringExpertise />
         <SkillsMatrix />
-        <OpenSource />
       </main>
       <ContactFooter />
     </div>

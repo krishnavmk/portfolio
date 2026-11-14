@@ -1,5 +1,12 @@
 import { buttonVariants } from "@/components/ui/button";
-import { Terminal, ArrowRight, Smartphone } from "lucide-react";
+import { Terminal, ArrowRight, CreditCard, Smartphone } from "lucide-react";
+
+const highlights = [
+  "6x faster search (1200ms to 200ms)",
+  "iOS + Android + Web",
+  "Zero release rollbacks",
+  "5 years experience",
+];
 
 export function Hero() {
   return (
@@ -33,16 +40,15 @@ export function Hero() {
         </div>
 
         <div
-          aria-hidden="true"
-          className="relative lg:h-[600px] hidden lg:flex flex-col items-center justify-center gap-6"
+          className="relative grid gap-3 sm:grid-cols-2 lg:h-[600px] lg:flex lg:flex-col lg:items-center lg:justify-center lg:gap-6"
         >
           {/* Decorative cards representing skills */}
           <div
-            className="bg-card p-6 rounded-2xl shadow-xl shadow-primary/5 border border-border w-72 transform -rotate-6 translate-x-12 z-20 dark:bg-slate-900 dark:border-slate-700"
+            className="bg-card p-6 rounded-2xl shadow-xl shadow-primary/5 border border-border lg:w-72 lg:-rotate-6 lg:translate-x-12 z-20 dark:bg-slate-900 dark:border-slate-700"
           >
             <div className="flex items-center gap-4 mb-3">
-              <div className="w-12 h-12 rounded-full bg-primary/10 text-primary flex items-center justify-center">
-                <Smartphone className="w-6 h-6" />
+              <div className="w-12 h-12 shrink-0 rounded-full bg-primary/10 text-primary flex items-center justify-center">
+                <Smartphone aria-hidden="true" className="w-6 h-6" />
               </div>
               <div>
                 <p className="font-bold text-foreground">Mobile Apps</p>
@@ -52,11 +58,11 @@ export function Hero() {
           </div>
 
           <div
-            className="bg-card p-6 rounded-2xl shadow-xl shadow-purple-500/5 border border-border w-72 transform rotate-3 -translate-x-12 z-10 dark:bg-slate-900 dark:border-slate-700"
+            className="bg-card p-6 rounded-2xl shadow-xl shadow-purple-500/5 border border-border lg:w-72 lg:rotate-3 lg:-translate-x-12 z-10 dark:bg-slate-900 dark:border-slate-700"
           >
             <div className="flex items-center gap-4 mb-3">
-              <div className="w-12 h-12 rounded-full bg-accent/10 text-accent flex items-center justify-center">
-                <Terminal className="w-6 h-6" />
+              <div className="w-12 h-12 shrink-0 rounded-full bg-accent/10 text-accent flex items-center justify-center">
+                <Terminal aria-hidden="true" className="w-6 h-6" />
               </div>
               <div>
                 <p className="font-bold text-foreground">Frontend Architecture</p>
@@ -66,21 +72,41 @@ export function Hero() {
           </div>
 
           <div
-            className="bg-card p-6 rounded-2xl shadow-xl shadow-primary/5 border border-border w-72 transform -rotate-2 translate-x-8 z-30 dark:bg-slate-900 dark:border-slate-700"
+            className="bg-card p-6 rounded-2xl shadow-xl shadow-primary/5 border border-border lg:w-72 lg:-rotate-2 lg:translate-x-8 z-30 dark:bg-slate-900 dark:border-slate-700"
           >
             <div className="flex items-center gap-4 mb-3">
-              <div className="w-12 h-12 rounded-full bg-primary/10 text-primary flex items-center justify-center">
-                <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <div className="w-12 h-12 shrink-0 rounded-full bg-primary/10 text-primary flex items-center justify-center">
+                <svg aria-hidden="true" className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
                 </svg>
               </div>
               <div>
-                <p className="font-bold text-foreground">Full-Stack Development</p>
-                <p className="text-xs text-muted-foreground">Node.js & REST APIs</p>
+                <p className="font-bold text-foreground">Full-Stack</p>
+                <p className="text-xs text-muted-foreground">Laravel, Node.js & REST APIs</p>
+              </div>
+            </div>
+          </div>
+          <div className="bg-card p-6 rounded-2xl shadow-xl shadow-primary/5 border border-border lg:w-72 lg:rotate-3 lg:-translate-x-8 dark:bg-slate-900 dark:border-slate-700">
+            <div className="flex items-center gap-4">
+              <div className="size-12 shrink-0 rounded-full bg-primary/10 text-primary grid place-items-center">
+                <CreditCard aria-hidden="true" className="size-6" />
+              </div>
+              <div>
+                <p className="font-bold text-foreground">Payments &amp; Fintech</p>
+                <p className="text-xs text-muted-foreground">Razorpay, invoicing &amp; booking flows</p>
               </div>
             </div>
           </div>
         </div>
+      </div>
+      <div className="container px-4 mx-auto mt-8 max-w-6xl">
+        <ul aria-label="Engineering highlights" role="list" className="grid grid-cols-2 lg:grid-cols-4 gap-1 rounded-2xl border border-border bg-card p-2 shadow-sm">
+          {highlights.map((highlight) => (
+            <li key={highlight} className="px-2 py-3 text-center text-sm font-semibold text-foreground">
+              {highlight}
+            </li>
+          ))}
+        </ul>
       </div>
     </section>
   );

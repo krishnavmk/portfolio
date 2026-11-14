@@ -10,6 +10,10 @@ export function About() {
             and the APIs behind them.
           </p>
           <p>
+            I build booking, checkout, invoicing, and payment workflows for fintech and consumer apps,
+            including Razorpay integration and webhook verification.
+          </p>
+          <p>
             I break complex problems into smaller pieces, define clear boundaries between components
             and services, and weigh trade-offs around performance, reliability, and maintainability.
             I use prototypes and tests to validate decisions and isolate issues across the stack.
